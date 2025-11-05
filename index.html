@@ -1,5 +1,1058 @@
-saaaa
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5286621023023183"
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Master - İzlenmelerinizi Katlayın</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5286621023023183"
      crossorigin="anonymous"></script>
+    
+    <style>
+        :root {
+            --primary: #8e2dc5;
+            --primary-light: #9d3dd5;
+            --primary-dark: #7a25b0;
+            --secondary: #ff6b6b;
+            --dark: #0f0f0f;
+            --darker: #0a0a0a;
+            --light: #ffffff;
+            --gray: #1a1a1a;
+            --gray-light: #2a2a2a;
+            --accent: #00d4ff;
+            --success: #00ff88;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--gray) 100%);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 15, 15, 0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(142, 45, 197, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(15, 15, 15, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            animation: bounce 2s infinite;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Reklam Alanları */
+        .ad-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .ad-label {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .ad-unit {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed var(--primary);
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .ad-unit.horizontal {
+            max-width: 728px;
+            min-height: 90px;
+        }
+
+        .ad-unit.vertical {
+            max-width: 300px;
+            min-height: 600px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, rgba(142, 45, 197, 0.1) 0%, transparent 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(142, 45, 197, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideUp 1s ease-out;
+            font-weight: 800;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: slideUp 1s ease-out 0.2s both;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 10px 30px rgba(142, 45, 197, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(142, 45, 197, 0.6);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(142, 45, 197, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Slayt Sistemi */
+        .slides-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .slide-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .slide {
+            background: rgba(42, 42, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 3rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(100px) rotateY(10deg);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0) rotateY(0);
+            pointer-events: all;
+            position: relative;
+        }
+
+        .slide.next {
+            opacity: 0;
+            transform: translateX(-100px) rotateY(-10deg);
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 8px 20px rgba(142, 45, 197, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .slide h2 {
+            font-size: 2.3rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .slide-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .slide-content ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .slide-content li {
+            padding: 18px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.15rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .slide-content li:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding-left: 55px;
+        }
+
+        .slide-content li:last-child {
+            border-bottom: none;
+        }
+
+        .slide-content li::before {
+            content: '✨';
+            position: absolute;
+            left: 20px;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+        }
+
+        .slide-content li:hover::before {
+            transform: scale(1.2);
+        }
+
+        .slide-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .nav-btn {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 16px 45px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 20px rgba(142, 45, 197, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(142, 45, 197, 0.6);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 3rem 0;
+            height: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.5s ease;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Premium Section */
+        .premium-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--gray) 0%, var(--dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: rotate 20s linear infinite;
+        }
+
+        .premium-card {
+            background: rgba(42, 42, 42, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 4rem;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 2px solid var(--primary);
+            box-shadow: 0 30px 60px rgba(142, 45, 197, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .premium-icon {
+            font-size: 4rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        .premium-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .premium-card p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-5px);
+            background: rgba(142, 45, 197, 0.2);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .slide {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content li {
+                padding: 15px 0;
+                padding-left: 40px;
+                font-size: 1rem;
+            }
+
+            .slide-content li::before {
+                left: 15px;
+            }
+
+            .premium-card {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .nav-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .ad-unit.horizontal {
+                min-height: 100px;
+            }
+
+            .ad-unit.vertical {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .slide {
+                padding: 1.5rem 1rem;
+            }
+
+            .slide-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.1rem;
+            }
+
+            .nav-btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-play-circle logo-icon"></i>
+                    YouTube Master
+                </a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>YouTube İzlenmelerinizi<br>Patlatmanın Sırları</h1>
+            <p>10 adımda kanalınızı büyütün, izlenmelerinizi katlayın ve YouTube'da başarıyı yakalayın!</p>
+            <a href="#slides" class="btn btn-primary">
+                <i class="fas fa-rocket"></i>
+                Ücretsiz Rehberi Başlat
+            </a>
+        </div>
+    </section>
+
+    <!-- Reklam - Üst Banner -->
+    <div class="container ad-container">
+        <div class="ad-label">Reklam</div>
+        <div class="ad-unit horizontal">
+            <!-- Google AdSense Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5286621023023183"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">+%300</div>
+                    <p>Ortalama İzlenme Artışı</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10.000+</div>
+                    <p>Mutlu YouTuber</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <p>Destek Hizmeti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slayt Sistemi -->
+    <section id="slides" class="slides-section">
+        <div class="container">
+            <div class="slide-container">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="slide active" id="slide1">
+                    <div class="slide-number">1</div>
+                    <h2>Kaliteli İçerik Üretimi</h2>
+                    <div class="slide-content">
+                        <ul>
+                            <li>İzleyicilere değer katan içerikler oluşturun</li>
+                            <li>Benzersiz ve özgün olmaya özen gösterin</li>
+                            <li>Yüksek kaliteli ses ve görüntü kullanın</li>
+                            <li>Hikaye anlatımı tekniklerini uygulayın</li>
+                            <li>İzleyiciyi içeriğe dahil edin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide" id="slide2">
+                    <div class="slide-number">2</div>
+                    <h2>Etkileyici Başlık Taktikleri</h2>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Merak uyandıran başlıklar kullanın</li>
+                            <li>Anahtar kelimeleri doğal şekilde yerleştirin</li>
+                            <li>Sayılar ve güçlü sıfatlar ekleyin</li>
+                            <li>60 karakter sınırını aşmayın</li>
+                            <li>Soru formatında başlıklar deneyin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Reklam - Orta Banner -->
+                <div class="container ad-container">
+                    <div class="ad-label">Reklam</div>
+                    <div class="ad-unit horizontal">
+                        <!-- Google AdSense Banner -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-5286621023023183"
+                             data-ad-slot="1234567891"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide" id="slide3">
+                    <div class="slide-number">3</div>
+                    <h2>Küçük Resim (Thumbnail) Sanatı</h2>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Yüksek kontrastlı renkler kullanın</li>
+                            <li>Duygusal yüz ifadeleri ekleyin</li>
+                            <li>Büyük, okunabilir metinler yazın</li>
+                            <li>Marka kimliğinizi yansıtın</li>
+                            <li>Mobil uyumluluğu test edin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide" id="slide4">
+                    <div class="slide-number">4</div>
+                    <h2>SEO Optimizasyonu</h2>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Anahtar kelime araştırması yapın</li>
+                            <li>Başlık ve açıklamada anahtar kelimeleri kullanın</li>
+                            <li>Transkript ve altyazı ekleyin</li>
+                            <li>Kartlar ve uç ekranları kullanın</li>
+                            <li>Oynatma listeleri oluşturun</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide" id="slide5">
+                    <div class="slide-number">5</div>
+                    <h2>Topluluk Oluşturma</h2>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Yorumlara samimi yanıtlar verin</li>
+                            <li>Canlı yayınlar yapın</li>
+                            <li>Topluluk sekmesini aktif kullanın</li>
+                            <li>İzleyici isteklerine kulak verin</li>
+                            <li>Diğer YouTuber'larla işbirliği yapın</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="slide-nav">
+                    <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">
+                        <i class="fas fa-arrow-left"></i>
+                        Önceki
+                    </button>
+                    <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">
+                        Sonraki
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reklam - Alt Banner -->
+    <div class="container ad-container">
+        <div class="ad-label">Reklam</div>
+        <div class="ad-unit horizontal">
+            <!-- Google AdSense Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5286621023023183"
+                 data-ad-slot="1234567892"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Premium Section -->
+    <section id="premium" class="premium-section">
+        <div class="container">
+            <div class="premium-card">
+                <div class="premium-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h2>Premium Eğitim Paketi</h2>
+                <p>Daha fazla bilgi ve profesyonel rehberlik için premium eğitim paketimizi inceleyin</p>
+                
+                <a href="https://www.shopier.com/efkwn" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 45px;">
+                    <i class="fas fa-external-link-alt"></i>
+                    TIKLA İNCELE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="margin-bottom: 1rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2rem;">
+                    YouTube Master
+                </h3>
+                <p style="opacity: 0.8; max-width: 400px; margin: 0 auto; font-size: 1.1rem;">
+                    YouTube kanalınızı büyütmek ve izlenmelerinizi artırmak için profesyonel çözümler
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YouTube Master. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progressBar = document.getElementById('progressBar');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const header = document.getElementById('header');
+
+        // Scroll effect for header
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function updateNavigation() {
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + '%';
+
+            prevBtn.disabled = currentSlide === 0;
+            
+            if (currentSlide === totalSlides - 1) {
+                nextBtn.innerHTML = '<i class="fas fa-check"></i> Tamamlandı';
+                nextBtn.onclick = function() {
+                    document.getElementById('premium').scrollIntoView({ behavior: 'smooth' });
+                };
+            } else {
+                nextBtn.innerHTML = 'Sonraki <i class="fas fa-arrow-right"></i>';
+                nextBtn.onclick = function() { changeSlide(1); };
+            }
+        }
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('next');
+
+            currentSlide += direction;
+
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+
+            setTimeout(() => {
+                slides.forEach(slide => {
+                    slide.classList.remove('next');
+                });
+                
+                slides[currentSlide].classList.add('active');
+                updateNavigation();
+
+                // Auto scroll to center of slide
+                slides[currentSlide].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center',
+                    inline: 'nearest'
+                });
+            }, 400);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                if (currentSlide < totalSlides - 1) {
+                    changeSlide(1);
+                }
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            alert('Mobil menü açılacak - gerekirse özelleştirebilirsiniz');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNavigation();
+            
+            // Initialize AdSense
+            if (typeof adsbygoogle !== 'undefined') {
+                adsbygoogle = window.adsbygoogle || [];
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
